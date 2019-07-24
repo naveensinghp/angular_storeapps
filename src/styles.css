@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+
+body, html {
+
+	background: #F9F9F9;
+	color: #333;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+
+}
+
+header {
+    background-color: #f5f5f5;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fafafa),color-stop(1,#f5f5f5));
+	padding: 15px 0;
+}
+
+	nav {
+		background: #fff;
+		border-bottom: 1px solid #ddd;
+		transition: all .25s ease-in-out;
+		-webkit-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		display: block;
+	}
+
+	.right {
+		float: right;
+		padding: 2%;
+		margin-right: 10%;
+	}
+	.search-container{
+		text-align: left;
+		width: 305px;
+	}
+	.search-container div.search input {
+		border: 1px solid #d3d3d3;
+		border-radius: 2px 0 0 2px;
+		display: inline-block;
+		font-size: 14px;
+		margin-top: 0;
+		min-height: 35px;
+		outline: 0;
+		padding: 0 5px;
+		width: 210px;
+	}
+	input[type=email], input[type=number], input[type=text], select, textarea {
+		border: 1px solid #ddd;
+		box-sizing: border-box;
+		font-family: 'Lato', sans-serif;
+		max-width: 100%;
+		padding: 10px;
+		min-height: 36px;
+		width: 100%;
+	}
+
+	.btn {
+		border-radius: 2px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 700!important;
+		font: 13px 'Lato', sans-serif;
+		line-height: 1.54;
+		padding: 8px 21px 6px;
+		float: right;
+		margin-top: 10px;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.08);
+		transition: all 183ms ease;
+		vertical-align: top;
+		border: 1px solid #3079ed;
+		background-color: #3a7efb;
+		background-image: linear-gradient(to bottom,#4d90fe,#4787ed);
+	}
+
+	nav li.menuitem {
+		-ms-flex-align: center;
+		align-items: center;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+
+	nav ul li {
+		font-weight: 400;
+		margin-right: 20px;
+	}
+
+	nav a {
+		color: inherit;
+		padding: 10px 0;
+		transition: color 183ms ease;
+	}
+	nav li.menuitem .separator {
+		background: #e4e4e4;
+		height: 20px;
+		margin-left: 20px;
+		width: 2px;
+	}
