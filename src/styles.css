@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '@angular/material/prebuilt-themes/purple-green.css';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 
 body, html {
@@ -32,6 +32,7 @@ header {
 		-moz-transition: all .25s ease-in-out;
 		-o-transition: all .25s ease-in-out;
 		display: block;
+		line-height: 40px;
 	}
 
 	.right {
@@ -142,7 +143,7 @@ nav li.active{
 }
 
 
-ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -159,4 +160,13 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.filtercard{
+	max-width: 75px;
+	margin-left: 60%;
+}
+
+.filtercategory{
+	max-width: 65%;
 }
