@@ -14,6 +14,9 @@ body, html {
 	padding: 0;
 
 }
+.search{
+	padding-left: 30px;
+}
 
 header {
     background-color: #f5f5f5;
@@ -56,12 +59,12 @@ header {
 		box-sizing: border-box;
 		font-family: 'Lato', sans-serif;
 		max-width: 100%;
-		padding: 10px;
+		padding: 11px ;
 		min-height: 36px;
-		width: 100%;
+		width: 75%;
 	}
 
-	.btn {
+	.btns {
 		border-radius: 2px;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -82,14 +85,31 @@ header {
 		background-image: linear-gradient(to bottom,#4d90fe,#4787ed);
 	}
 
+	.btn {
+		border-radius: 2px;
+		background-color: #3a7efb;
+		display: inline-block;
+		font-weight: 700!important;
+		font: 13px 'Lato', sans-serif;
+		border: 1px solid #3079ed;
+  		border: none;
+  		color: white;
+  		padding: 10px 14px;
+  		font-size: 16px;
+  		cursor: pointer;
+}
+
+
 	nav li.menuitem {
 		-ms-flex-align: center;
 		align-items: center;
 		display: -ms-inline-flexbox;
+		font-family: 'Lato', sans-serif;
 		display: inline-flex;
-		-ms-flex-flow: row wrap;
 		flex-flow: row wrap;
+		padding-left: 18%;
 	}
+	
 
 	nav ul li {
 		font-weight: 400;
@@ -99,6 +119,7 @@ header {
 	nav a {
 		color: inherit;
 		padding: 10px 0;
+		text-decoration: none;
 		transition: color 183ms ease;
 	}
 	nav li.menuitem .separator {
@@ -107,3 +128,35 @@ header {
 		margin-left: 20px;
 		width: 2px;
 	}
+
+nav li.active{
+  padding-bottom: 6px;
+    border-bottom: 4px solid #2387f3
+}
+
+.heading {
+	text-align: left;
+	margin-bottom: 0;
+	position: relative;
+	left: 19%;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
