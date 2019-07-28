@@ -4,6 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatGridListModule } from '@angular/material/grid-list';
+
+
+
+
 
 
 
@@ -20,7 +27,11 @@ import { AppComponent } from './app.component';
     NoopAnimationsModule,
     AppRoutingModule,
     MatCardModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

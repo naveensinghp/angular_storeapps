@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'storeapps';
-  public show_dialog : boolean = false;
+  panelOpenState = false;
+
 }

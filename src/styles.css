@@ -137,7 +137,7 @@ nav li.active{
 
 .heading {
 	text-align: left;
-	margin-bottom: 0;
+	margin-bottom: 1px;
 	position: relative;
 	left: 19%;
 }
@@ -163,10 +163,17 @@ li a {
 }
 
 .filtercard{
-	max-width: 75px;
+	max-width: 100px;
 	margin-left: 60%;
 }
 
-.filtercategory{
-	max-width: 65%;
+.filterbox {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	display: block;
+	height: 45px;
+}
+h4 {
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
 }
