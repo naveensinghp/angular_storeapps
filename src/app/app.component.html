@@ -46,7 +46,7 @@
             <mat-grid-tile>
               <h4> Category </h4> &nbsp;
                 <select>
-                    <option> Mobile </option>
+                    <option *ngFor="let category of xxddd"> {{ xxddd.id}} </option>
                     <option> Clothes </option>
                     <option> PS$ Games </option>
                 </select>
