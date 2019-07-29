@@ -177,3 +177,9 @@ h4 {
 	font-family: 'Lato', sans-serif;
 	font-weight: normal;
 }
+
+
+.example-card {
+  max-width: 400px;
+}
+
