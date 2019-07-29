@@ -46,9 +46,8 @@
             <mat-grid-tile>
               <h4> Category </h4> &nbsp;
                 <select>
-                    <option *ngFor="let category of xxddd"> {{ xxddd.id}} </option>
-                    <option> Clothes </option>
-                    <option> PS$ Games </option>
+                    <option></option>
+                    <option *ngFor="let xs of categorys"> {{ xs.name }} </option>
                 </select>
             </mat-grid-tile>
             <mat-grid-tile>
@@ -106,3 +105,5 @@
       <mat-card  class="filtercategory"> Category </mat-card>
   </div> -->
 </div>
+
+
