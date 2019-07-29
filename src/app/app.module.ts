@@ -22,7 +22,7 @@ import { FilterComponent } from './filter/filter.component';
   declarations: [
     AppComponent,
     FilterComponent
-    
+
   ],
   imports: [
     BrowserModule,

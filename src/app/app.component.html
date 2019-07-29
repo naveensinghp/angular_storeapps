@@ -5,7 +5,7 @@
           <button class="btn"><i class="fa fa-search"></i></button>&nbsp;
           <button class="btn" style="margin-right: -25%;">Contact us</button>
     </div>
-    
+
     <div style="padding-left:19%; margin-bottom: -10px;">
         <a href="//www.google.com/work/chrome/">
           <img src="assets/img/storeapps_logo.png" width="220" >
@@ -29,14 +29,14 @@
       </ul>
     </div>
   </div>
-</nav> 
+</nav>
 
 <div class="heading">
   <h1> Shop on StoreApps </h1>
   <h4 style="font-weight: lighter;">Find the right product for your workplace (fulfilled by Promevo).</h4>
   <div style="max-width: 65%;">
     <mat-accordion>
-      <mat-expansion-panel>
+      <mat-expansion-panel [expanded]="true">
         <mat-expansion-panel-header>
           <mat-panel-title>
             Filter
@@ -80,21 +80,14 @@
                 <select>
                     <option> 6</option>
                 </select>
-            </mat-grid-tile>  
+            </mat-grid-tile>
         </mat-grid-list>
       </mat-expansion-panel>
-     
-    </mat-accordion> 
+
+    </mat-accordion>
   </div>
 
   <!-- <div *ngIf="expanded == true">
       <mat-card  class="filtercategory"> Category </mat-card>
   </div> -->
 </div>
-
-  
-
-    
-
-
-  
