@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -16,12 +17,20 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
 import { FilterComponent } from './filter/filter.component';
+import { RouterModule } from '@angular/router';
+import { ProductPageComponent } from './product-page/product-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilterComponent
+    FilterComponent,
+    HomePageComponent,
+    PageNotFoundComponent,
+    ProductPageComponent
+   
 
   ],
   imports: [
@@ -34,7 +43,13 @@ import { FilterComponent } from './filter/filter.component';
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    RouterModule.forRoot([
+      
+      { path: '', component: HomePageComponent },
+      { path: 'products/:id', component: ProductPageComponent },
+      { path: '**', component: PageNotFoundComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

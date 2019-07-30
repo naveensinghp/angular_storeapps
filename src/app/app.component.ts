@@ -9,12 +9,7 @@ export class AppComponent {
   title = 'storeapps';
   panelOpenState = false;
 
-  public colors = ["red","Yellow"];
 
-   categorys = [
-    { "id":1, "name":"All" },
-    { "id":2, "name":"large" },
-    { "id":3, "name":"small" }
-  ];
+  
 
 }
