@@ -7,7 +7,7 @@
       </div>
   
       <div style="padding-left:19%; margin-bottom: -10px;">
-          <a href="//www.google.com/work/chrome/">
+          <a href="#">
             <img src="assets/img/storeapps_logo.png" width="220" >
           </a>
       </div>
@@ -18,9 +18,9 @@
    <nav class="nav">
     <div class="container">
       <ul style="padding-left: 19%;">
-         <li> <a routerLink=""> why Storeapps? </a> <span class="separator"></span> </li>
+         <li routerLinkActive ="{'active' : active =='storeapps'}"> <a routerLink="/storeapps"> why Storeapps? </a> <span class="separator"></span> </li>
          &nbsp;
-         <li routerLinkActive="active current"> <a routerLink="/products"> All Products </a> </li>
+         <li routerLinkActive="{'active' : active =='products'}"> <a routerLink="/products"> All Products </a> </li>
       </ul>
       <div style="float: right; padding-right: 13%; margin-top: -51px;">
         <ul>
@@ -30,7 +30,7 @@
       </div>
     </div>
   </nav>
-  
+
   <div class="heading">
     <h1> Shop on StoreApps </h1>
     <h4 style="font-weight: lighter;">Find the right product for your workplace (fulfilled by Promevo).</h4>
@@ -45,11 +45,12 @@
           <mat-grid-list cols="6" rowHeight="2:1">
               <mat-grid-tile>
                 <h4> Category </h4> &nbsp;
-                  <select>
+                  <select (change)="selectChangeHandler($event)">
                       <option></option>
                       <option *ngFor="let xs of categorys" value="{{xs.id}}"> {{ xs.name }} </option>
                   </select>
               </mat-grid-tile>
+              <p><span>You selected: </span><b>{{selectedDay}}</b></p>
               <mat-grid-tile>
                 <h4> Discount </h4> &nbsp;
                   <select>

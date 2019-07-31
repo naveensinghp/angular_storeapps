@@ -7,14 +7,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
+  selectedDay: string = '';
 
-  
+  selectChangeHandler (event: any) {
+    //update the ui
+    this.selectedDay = event.target.value;
+    console.log(this.selectedDay);
+  }
+
+ 
   constructor( private route : ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
 
-      //console.log(params);
+      console.log(params);
       let id = +params.get('id');
       console.log(id);
 
@@ -27,7 +34,9 @@ export class ProductPageComponent implements OnInit {
     { "id":3, "name":"small" }
   ];
 
+  onSelect(event: any){
 
+  }
   discount = [
     { "id":1, "discount" : "10%"},
     { "id":2, "discount" : "30%"},

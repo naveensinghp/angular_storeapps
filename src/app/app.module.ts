@@ -46,8 +46,9 @@ import { ProductPageComponent } from './product-page/product-page.component';
     MatGridListModule,
     RouterModule.forRoot([
       
-      { path: '', component: HomePageComponent },
-      { path: 'products/:id', component: ProductPageComponent },
+  
+      { path: 'products', component: ProductPageComponent },
+      { path: 'storeapps', component: ProductPageComponent },
       { path: '**', component: PageNotFoundComponent }
     ])
   ],
