@@ -7,12 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
-  selectedDay: string = '';
+  category: string = '';
 
   selectChangeHandler (event: any) {
     //update the ui
-    this.selectedDay = event.target.value;
-    console.log(this.selectedDay);
+    this.category = event.target.value;
+    console.log(this.category);
   }
 
  
@@ -34,9 +34,7 @@ export class ProductPageComponent implements OnInit {
     { "id":3, "name":"small" }
   ];
 
-  onSelect(event: any){
-
-  }
+  
   discount = [
     { "id":1, "discount" : "10%"},
     { "id":2, "discount" : "30%"},

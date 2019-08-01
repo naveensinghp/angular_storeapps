@@ -19,10 +19,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FilterComponent } from './filter/filter.component';
-import { RouterModule } from '@angular/router';
+import { Routes,RouterModule } from '@angular/router';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
+const routes: Routes=[];
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,11 +45,12 @@ import { ProductPageComponent } from './product-page/product-page.component';
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
+    MatBadgeModule,
     MatGridListModule,
     RouterModule.forRoot([
       
   
-      { path: 'products', component: ProductPageComponent },
+      { path: 'products', component: ProductPageComponent  },
       { path: 'storeapps', component: ProductPageComponent },
       { path: '**', component: PageNotFoundComponent }
     ])
