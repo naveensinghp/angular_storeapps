@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { NgxSpinnerService } from "ngx-spinner"; 
+
 
 @Component({
   selector: 'app-product-page',
@@ -12,20 +15,34 @@ export class ProductPageComponent implements OnInit {
   selectChangeHandler (event: any) {
     //update the ui
     this.category = event.target.value;
-    console.log(this.category);
+    //console.log(this.category);
+    this.router.navigate(['/products'], {queryParams:{category: this.category}});
   }
 
  
-  constructor( private route : ActivatedRoute) { }
+  constructor( private router : Router,private route : ActivatedRoute, private spinner: NgxSpinnerService) { }
+
+
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
+    this.spinner.show();
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 1000);
+    
+    // this.route.paramMap.subscribe(params => {
 
-      console.log(params);
-      let id = +params.get('id');
-      console.log(id);
+    
+    //   let id = +params.get('id');
+    //   console.log(id);
 
-    });
+    // });
+    console.log( this.route.snapshot.queryParamMap.has('category'));
+    console.log( this.route.snapshot.queryParamMap.get('category'));
+    console.log( this.route.snapshot.queryParamMap.getAll('category'));
+    console.log( this.route.snapshot.queryParamMap.keys);
+    console.log( this.route.snapshot.queryParams.keys);
   }
 
   public categorys = [
@@ -34,6 +51,11 @@ export class ProductPageComponent implements OnInit {
     { "id":3, "name":"small" }
   ];
 
+  onSelect(categorys : string ){
+
+    this.router.navigate(['/products'], {queryParams:{category: this.categorys}});
+    
+  }
   
   discount = [
     { "id":1, "discount" : "10%"},

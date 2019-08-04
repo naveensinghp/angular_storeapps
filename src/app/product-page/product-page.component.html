@@ -20,7 +20,7 @@
       <ul style="padding-left: 19%;">
          <li routerLinkActive ="{'active' : active =='storeapps'}"> <a routerLink="/storeapps"> why Storeapps? </a> <span class="separator"></span> </li>
          &nbsp;
-         <li routerLinkActive="{'active' : active =='products'}"> <a routerLink="/products"> All Products </a> </li>
+         <li routerLinkActive="{'active' : active =='products'}"> <a routerLink="/products" > All Products </a> </li>
       </ul>
       <div style="float: right; padding-right: 13%; margin-top: -51px;">
         <ul>
@@ -50,10 +50,9 @@
                       <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
                   </select>
               </mat-grid-tile>
-              <p><span>You selected: </span><b>{{category}}</b></p>
               <mat-grid-tile>
                 <h4> Discount </h4> &nbsp;
-                  <select>
+                  <select (change) ="selectDiscount($event)">
                       <option></option>
                       <option *ngFor="let offer of discount" value="{{offer.id}}" > {{ offer.discount }} </option>
                   </select>
@@ -83,30 +82,46 @@
                   </select>
               </mat-grid-tile>
           </mat-grid-list>
+          <mat-grid-list cols="4" rowHeight="2:1">
+            <mat-grid-tile>
+              <mat-checkbox>
+                <h4>Backlit Keyboard</h4>
+              </mat-checkbox>
+            </mat-grid-tile>
+              <mat-grid-tile>
+              <mat-checkbox>
+                <h4>Touch Screen!</h4>
+              </mat-checkbox>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <h4> Price Range</h4>
+              <mat-slider step="4" tickInterval="3"></mat-slider>
+
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button class="btn"  routerLink="/products"> Reset </button>
+            </mat-grid-tile>
+          </mat-grid-list>
         </mat-expansion-panel>
-  
       </mat-accordion>
     </div>
   
-    <br/>
-  
-  
+  <h1>Hangout Meet Hardware</h1>
+  <div class="aligned">
   <mat-card class="example-card">
-    <img mat-card-image src="assets/img/product2.png" alt="Photo of a Shiba Inu">
+    <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        Hangout Meet SpeakerMic
       </p>
     </mat-card-content>
     <mat-card-actions>
       <b> $ 249.00 </b>
     </mat-card-actions>
   </mat-card>
-  
+  </div>
     <!-- <div *ngIf="expanded == true">
         <mat-card  class="filtercategory"> Category </mat-card>
     </div> -->
   </div>
-  
-  
   

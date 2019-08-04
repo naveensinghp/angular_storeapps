@@ -19,12 +19,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FilterComponent } from './filter/filter.component';
-import { Routes,RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { MatButtonModule } from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
 
 
-const routes: Routes=[];
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +51,9 @@ const routes: Routes=[];
     MatInputModule,
     MatBadgeModule,
     MatGridListModule,
+    NgxSpinnerModule,
+    MatButtonModule,
+    MatSliderModule,
     RouterModule.forRoot([
       
   
