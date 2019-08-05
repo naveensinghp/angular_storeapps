@@ -44,40 +44,40 @@
           </mat-expansion-panel-header>
           <mat-grid-list cols="6" rowHeight="2:1">
               <mat-grid-tile>
-                <h4> Category </h4> &nbsp;
-                  <select (change)="selectChangeHandler($event)">
+                <label> Category </label> &nbsp;
+                  <select class="filterdropdown" (change)="selectChangeHandler($event)">
                       <option></option>
                       <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
                   </select>
               </mat-grid-tile>
               <mat-grid-tile>
                 <h4> Discount </h4> &nbsp;
-                  <select (change) ="selectDiscount($event)">
+                  <select class="filterdropdown" (change) ="selectDiscount($event)">
                       <option></option>
                       <option *ngFor="let offer of discount" value="{{offer.id}}" > {{ offer.discount }} </option>
                   </select>
               </mat-grid-tile>
               <mat-grid-tile>
                <h4> Processor</h4> &nbsp;
-                  <select>
+                  <select class="filterdropdown">
                       <option> 3</option>
                   </select>
               </mat-grid-tile>
               <mat-grid-tile>
                <h4> Storage </h4>  &nbsp;
-                  <select>
+                  <select class="filterdropdown">
                       <option> 4</option>
                   </select>
               </mat-grid-tile>
               <mat-grid-tile>
                <h4> Seller </h4>  &nbsp;
-                  <select>
+                  <select class="filterdropdown">
                       <option> 5</option>
                   </select>
               </mat-grid-tile>
               <mat-grid-tile>
                 Test &nbsp;
-                  <select>
+                  <select class="filterdropdown">
                       <option> 6</option>
                   </select>
               </mat-grid-tile>
@@ -99,7 +99,7 @@
 
             </mat-grid-tile>
             <mat-grid-tile>
-                <button class="btn"  routerLink="/products"> Reset </button>
+                <button mat-stroked-button color="primary"  routerLink="/products"> Reset </button>
             </mat-grid-tile>
           </mat-grid-list>
         </mat-expansion-panel>
