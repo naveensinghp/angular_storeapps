@@ -1,111 +1,72 @@
-<header>
-    <div class="container">
-      <div class="search-container" style="float:right; display: inline-block; margin-top: 6px; text-align: right; padding-right: 17%;">
-            <input id="navSearchInput" class="expanded" placeholder="Search Shop Storeapps" type="text">
-            <button class="btn"><i class="fa fa-search"></i></button>&nbsp;
-            <button class="btn" style="margin-right: -25%;">Contact us</button>
-      </div>
-  
-      <div style="padding-left:19%; margin-bottom: -10px;">
-          <a href="#">
-            <img src="assets/img/storeapps_logo.png" width="220" >
-          </a>
-      </div>
-    </div>
-  </header>
-  
-  
-   <nav class="nav">
-    <div class="container">
-      <ul style="padding-left: 19%;">
-         <li routerLinkActive ="{'active' : active =='storeapps'}"> <a routerLink="/storeapps"> why Storeapps? </a> <span class="separator"></span> </li>
-         &nbsp;
-         <li routerLinkActive="{'active' : active =='products'}"> <a routerLink="/products" > All Products </a> </li>
-      </ul>
-      <div style="float: right; padding-right: 13%; margin-top: -51px;">
-        <ul>
-          <li style="padding-top: 4px;"> Sign In </li>
-         <li style="padding-top: 10%;"> <a routerLink=""> <img src="assets/img/cart.png" width="25"> </a> <span style="padding-top: 7px;left: -7px;" matBadgePosition="before" matBadgeColor="accent" matBadge="2"> </span> </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
+
+<app-header></app-header>
   <div class="heading">
     <h1> Shop on StoreApps </h1>
     <h4 style="font-weight: lighter;">Find the right product for your workplace (fulfilled by Promevo).</h4>
     <div style="max-width: 65%;">
       <mat-accordion>
         <mat-expansion-panel [expanded]="true">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Filter
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <mat-grid-list cols="6" rowHeight="2:1">
-              <mat-grid-tile>
-                <label> Category </label> &nbsp;
-                  <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                      <option></option>
-                      <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
-                  </select>
-              </mat-grid-tile>
-              <mat-grid-tile>
-                <h4> Discount </h4> &nbsp;
-                  <select class="filterdropdown" (change) ="selectDiscount($event)">
-                      <option></option>
-                      <option *ngFor="let offer of discount" value="{{offer.id}}" > {{ offer.discount }} </option>
-                  </select>
-              </mat-grid-tile>
-              <mat-grid-tile>
-               <h4> Processor</h4> &nbsp;
-                  <select class="filterdropdown">
-                      <option> 3</option>
-                  </select>
-              </mat-grid-tile>
-              <mat-grid-tile>
-               <h4> Storage </h4>  &nbsp;
-                  <select class="filterdropdown">
-                      <option> 4</option>
-                  </select>
-              </mat-grid-tile>
-              <mat-grid-tile>
-               <h4> Seller </h4>  &nbsp;
-                  <select class="filterdropdown">
-                      <option> 5</option>
-                  </select>
-              </mat-grid-tile>
-              <mat-grid-tile>
-                Test &nbsp;
-                  <select class="filterdropdown">
-                      <option> 6</option>
-                  </select>
-              </mat-grid-tile>
-          </mat-grid-list>
-          <mat-grid-list cols="4" rowHeight="2:1">
-            <mat-grid-tile>
-              <mat-checkbox>
-                <h4>Backlit Keyboard</h4>
-              </mat-checkbox>
-            </mat-grid-tile>
-              <mat-grid-tile>
-              <mat-checkbox>
-                <h4>Touch Screen!</h4>
-              </mat-checkbox>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <h4> Price Range</h4>
-              <mat-slider step="4" tickInterval="3"></mat-slider>
+          <table style="width:100%" border="0" cellspacing="5">
+          <tr>
+          <th style="font-weight: normal; font-size: 16px;">Category</th> 
+          <th style="font-weight: normal; font-size: 16px;">Screen Size</th> 
+          <th style="font-weight: normal; font-size: 16px;">Ram</th>
+          <th style="font-weight: normal; font-size: 16px;">Processor</th>
+          <th style="font-weight: normal; font-size: 16px;">Resoultion</th>
+          <th style="font-weight: normal; font-size: 16px;">Storage</th>
+          </tr>
+          <tr>
+            <td rowspan="2">
+                <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                    <option></option>
+                    <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+                </select>
+            </td>
+          </tr>
+        <tr>
+          <td>
+            <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                  <option></option>
+                  <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+            </select>
+          </td>
+          <td>
+            <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                    <option></option>
+                    <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+              </select>
+          </td>
+          <td> 
+            <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                  <option></option>
+                  <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+            </select>
+          </td>
+          <td>
+             <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                <option></option>
+                <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+            </select>
+          </td>
+          <td>
+             <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                <option></option>
+                <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+            </select>
+          </td>
+        </tr>
+      </table>
 
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <button mat-stroked-button color="primary"  routerLink="/products"> Reset </button>
-            </mat-grid-tile>
-          </mat-grid-list>
-        </mat-expansion-panel>
-      </mat-accordion>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span style="font-size: 18px;padding-left: 96%;">Filter</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+       
+      </mat-expansion-panel>
+    </mat-accordion>
     </div>
-  
+
   <h1>Hangout Meet Hardware</h1>
   <div class="aligned">
   <mat-card class="example-card">
@@ -124,4 +85,9 @@
         <mat-card  class="filtercategory"> Category </mat-card>
     </div> -->
   </div>
-  
+
+
+
+
+
+ 

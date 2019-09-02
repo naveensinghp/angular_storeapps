@@ -25,6 +25,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -35,7 +36,8 @@ import { MatSliderModule } from '@angular/material/slider';
     FilterComponent,
     HomePageComponent,
     PageNotFoundComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    HeaderComponent
    
 
   ],
@@ -56,9 +58,9 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSliderModule,
     RouterModule.forRoot([
       
-  
+      { path: '', component: HomePageComponent  },
       { path: 'products', component: ProductPageComponent  },
-      { path: 'storeapps', component: ProductPageComponent },
+      { path: 'storeapps', component: HomePageComponent },
       { path: '**', component: PageNotFoundComponent }
     ])
   ],

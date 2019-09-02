@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { NgxSpinnerService } from "ngx-spinner"; 
+import { NgxSpinnerService } from "ngx-spinner";
 
 
 @Component({
@@ -11,15 +11,19 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class ProductPageComponent implements OnInit {
   category: string = '';
+  discount: string = '';
 
   selectChangeHandler (event: any) {
     //update the ui
     this.category = event.target.value;
     //console.log(this.category);
-    this.router.navigate(['/products'], {queryParams:{category: this.category}});
+    this.router.navigate(['/products'], {queryParams:{category: this.category} });
   }
 
- 
+ selectDiscount(id:number)
+ {
+  console.log(id);
+ }
   constructor( private router : Router,private route : ActivatedRoute, private spinner: NgxSpinnerService) { }
 
 
@@ -30,10 +34,10 @@ export class ProductPageComponent implements OnInit {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
     }, 1000);
-    
+
     // this.route.paramMap.subscribe(params => {
 
-    
+
     //   let id = +params.get('id');
     //   console.log(id);
 
@@ -51,18 +55,17 @@ export class ProductPageComponent implements OnInit {
     { "id":3, "name":"small" }
   ];
 
+  public discounts = [
+    { "id":1, "name":"All" },
+    { "id":2, "name":"large" },
+    { "id":3, "name":"small" }
+  ];
+
   onSelect(categorys : string ){
 
     this.router.navigate(['/products'], {queryParams:{category: this.categorys}});
-    
-  }
-  
-  discount = [
-    { "id":1, "discount" : "10%"},
-    { "id":2, "discount" : "30%"},
-    { "id":3, "discount" : "40%"},
-    { "id":4, "discount" : "50%"},
-    { "id":5, "discount" : "75%"}
 
-  ]
+  }
+
+
 }
