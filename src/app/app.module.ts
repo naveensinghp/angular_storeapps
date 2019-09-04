@@ -26,6 +26,9 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { HeaderComponent } from './header/header.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogPageComponent } from './dialog-page/dialog-page.component';
+
 
 
 
@@ -37,7 +40,8 @@ import { HeaderComponent } from './header/header.component';
     HomePageComponent,
     PageNotFoundComponent,
     ProductPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    DialogPageComponent
    
 
   ],
@@ -56,6 +60,7 @@ import { HeaderComponent } from './header/header.component';
     NgxSpinnerModule,
     MatButtonModule,
     MatSliderModule,
+    MatDialogModule,
     RouterModule.forRoot([
       
       { path: '', component: HomePageComponent  },
