@@ -28,6 +28,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { HeaderComponent } from './header/header.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogPageComponent } from './dialog-page/dialog-page.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { FooterPageComponent } from './footer-page/footer-page.component';
+
 
 
 
@@ -41,9 +44,13 @@ import { DialogPageComponent } from './dialog-page/dialog-page.component';
     PageNotFoundComponent,
     ProductPageComponent,
     HeaderComponent,
-    DialogPageComponent
+    DialogPageComponent,
+    FooterPageComponent
    
 
+  ],
+  entryComponents: [
+    DialogPageComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +62,7 @@ import { DialogPageComponent } from './dialog-page/dialog-page.component';
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDividerModule,
     MatBadgeModule,
     MatGridListModule,
     NgxSpinnerModule,

@@ -24,8 +24,10 @@ a {
 	color:#2387f3;
 	text-decoration: none;
 	cursor: pointer;
-	
+
 }
+
+
 
 
 header {
@@ -54,7 +56,7 @@ header {
 		text-align: left;
 		width: 305px;
 	}
-	.search-container div.search input {
+	.placeholder {
 		border: 1px solid #d3d3d3;
 		border-radius: 2px 0 0 2px;
 		display: inline-block;
@@ -75,26 +77,7 @@ header {
 		width: 75%;
 	}
 
-	.btns {
-		border-radius: 2px;
-		box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		color: #fff;
-		cursor: pointer;
-		display: inline-block;
-		font-weight: 700!important;
-		font: 13px 'Lato', sans-serif;
-		line-height: 1.54;
-		padding: 8px 21px 6px;
-		float: right;
-		margin-top: 10px;
-		text-shadow: 0 -1px 0 rgba(0,0,0,.08);
-		transition: all 183ms ease;
-		vertical-align: top;
-		border: 1px solid #3079ed;
-		background-color: #3a7efb;
-		background-image: linear-gradient(to bottom,#4d90fe,#4787ed);
-	}
+
 
 	.btn {
 		border-radius: 2px;
@@ -103,11 +86,15 @@ header {
 		font-weight: 700!important;
 		font: 13px 'Lato', sans-serif;
 		border: 1px solid #3079ed;
-  		border: none;
-  		color: white;
-  		padding: 10px 14px;
-  		font-size: 16px;
-  		cursor: pointer;
+  	color: #fff;
+		font:13px RobotoDraft,arial,sans-serif;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.08);
+    transition: all 183ms ease;
+  	padding: 10px 14px;
+  	font-size: 16px;
+  	cursor: pointer;
+		background-color: #3a7efb;
+		background-image: linear-gradient(to bottom,#4d90fe,#4787ed);
 }
 
 
@@ -120,7 +107,7 @@ header {
 		flex-flow: row wrap;
 		padding-left: 18%;
 	}
-	
+
 
 	nav ul li {
 		font-weight: 400;
@@ -169,7 +156,7 @@ li {
 }
 
 li a {
-  
+
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

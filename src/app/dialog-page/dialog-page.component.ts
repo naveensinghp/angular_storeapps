@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material'
+
 
 @Component({
   selector: 'app-dialog-page',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit() {
+
   }
+
+closeDialog(){
+	
+	this.dialog.closeAll();
+}
 
 }

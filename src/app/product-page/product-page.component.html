@@ -8,8 +8,8 @@
         <mat-expansion-panel [expanded]="true">
           <table style="width:100%" border="0" cellspacing="5">
           <tr>
-          <th style="font-weight: normal; font-size: 16px;">Category</th> 
-          <th style="font-weight: normal; font-size: 16px;">Screen Size</th> 
+          <th style="font-weight: normal; font-size: 16px;">Category</th>
+          <th style="font-weight: normal; font-size: 16px;">Screen Size</th>
           <th style="font-weight: normal; font-size: 16px;">Ram</th>
           <th style="font-weight: normal; font-size: 16px;">Processor</th>
           <th style="font-weight: normal; font-size: 16px;">Resoultion</th>
@@ -36,7 +36,7 @@
                     <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
               </select>
           </td>
-          <td> 
+          <td>
             <select class="filterdropdown" (change)="selectChangeHandler($event)">
                   <option></option>
                   <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
@@ -56,18 +56,28 @@
           </td>
         </tr>
       </table>
+      <br/>
+
+      <table style="width:100%" border="0" cellspacing="1">
+          <tr>
+          <th style="font-weight: normal; font-size: 16px;"><mat-checkbox>Backlit Keyboard</mat-checkbox></th>
+          <th style="font-weight: normal; font-size: 16px;"><mat-checkbox>Touch Screen</mat-checkbox></th>
+          <th style="font-weight: normal; font-size: 16px;">Price Range</th>
+         
+          </tr>
+      </table>
+
 
         <mat-expansion-panel-header>
           <mat-panel-title>
             <span style="font-size: 18px;padding-left: 96%;">Filter</span>
           </mat-panel-title>
         </mat-expansion-panel-header>
-       
       </mat-expansion-panel>
     </mat-accordion>
     </div>
 
-  <h1>Hangout Meet Hardware</h1>
+  <h2 >Hangout Meet Hardware</h2>
   <div class="aligned">
   <mat-card class="example-card">
     <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
@@ -81,13 +91,4 @@
     </mat-card-actions>
   </mat-card>
   </div>
-    <!-- <div *ngIf="expanded == true">
-        <mat-card  class="filtercategory"> Category </mat-card>
-    </div> -->
   </div>
-
-
-
-
-
- 

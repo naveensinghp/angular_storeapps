@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from "ngx-spinner";
+import { MatDialog } from '@angular/material'
+import { DialogPageComponent } from '../dialog-page/dialog-page.component';
 
 
 @Component({
@@ -24,9 +26,20 @@ export class ProductPageComponent implements OnInit {
  {
   console.log(id);
  }
-  constructor( private router : Router,private route : ActivatedRoute, private spinner: NgxSpinnerService) { }
+  constructor( public dialog:MatDialog,private router : Router,private route : ActivatedRoute, private spinner: NgxSpinnerService) { }
 
 
+openDialog(){
+  this.dialog.open( DialogPageComponent);
+
+}
+
+closeDialog()
+{
+  alert('ff');
+  let dialogRef =this.dialog.open( DialogPageComponent);
+  
+}
 
   ngOnInit() {
     this.spinner.show();
