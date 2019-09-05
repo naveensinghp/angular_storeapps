@@ -14,6 +14,7 @@
           <th style="font-weight: normal; font-size: 16px;">Processor</th>
           <th style="font-weight: normal; font-size: 16px;">Resoultion</th>
           <th style="font-weight: normal; font-size: 16px;">Storage</th>
+          <th style="font-weight: normal; font-size: 16px;">Manufacture</th>
           </tr>
           <tr>
             <td rowspan="2">
@@ -54,18 +55,28 @@
                 <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
             </select>
           </td>
+           <td>
+             <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                <option></option>
+                <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+            </select>
+          </td>
         </tr>
       </table>
       <br/>
 
-      <table style="width:100%" border="0" cellspacing="1">
+      <table style="width:47%" border="1">
           <tr>
-          <th style="font-weight: normal; font-size: 16px;"><mat-checkbox>Backlit Keyboard</mat-checkbox></th>
-          <th style="font-weight: normal; font-size: 16px;"><mat-checkbox>Touch Screen</mat-checkbox></th>
-          <th style="font-weight: normal; font-size: 16px;">Price Range</th>
-         
+            <th rowspan="2" style="font-weight: normal; font-size: 16px;"><mat-checkbox>Backlit Keyboard</mat-checkbox></th>
+            <th style="font-weight: normal; font-size: 16px;"><mat-checkbox>Touch Screen</mat-checkbox></th>
+            <th  style="font-weight: normal; font-size: 16px;">Price Range</th>
+            <th>Price</th>
+            <th style="font-weight: normal; font-size: 16px;">
+              Range
+            </th>
           </tr>
       </table>
+      <button mat-stroked-button color="accent">Reset</button>
 
 
         <mat-expansion-panel-header>
