@@ -6,77 +6,87 @@
     <div style="max-width: 65%;">
       <mat-accordion>
         <mat-expansion-panel [expanded]="true">
-          <table style="width:100%" border="0" cellspacing="5">
+          <table style="width:100%" border="0" cellspacing="3">
           <tr>
-          <th style="font-weight: normal; font-size: 16px;">Category</th>
-          <th style="font-weight: normal; font-size: 16px;">Screen Size</th>
-          <th style="font-weight: normal; font-size: 16px;">Ram</th>
-          <th style="font-weight: normal; font-size: 16px;">Processor</th>
-          <th style="font-weight: normal; font-size: 16px;">Resoultion</th>
-          <th style="font-weight: normal; font-size: 16px;">Storage</th>
-          <th style="font-weight: normal; font-size: 16px;">Manufacture</th>
+            <th style="font-weight: normal; font-size: 16px;">Category</th>
+            <th style="font-weight: normal; font-size: 16px;">Screen Size</th>
+            <th style="font-weight: normal; font-size: 16px;">Ram</th>
+            <th style="font-weight: normal; font-size: 16px;">Processor</th>
+            <th style="font-weight: normal; font-size: 16px;">Resoultion</th>
+            <th style="font-weight: normal; font-size: 16px;">Storage</th>
+            <th style="font-weight: normal; font-size: 16px;">Manufacture</th>
           </tr>
           <tr>
-            <td rowspan="2">
-                <select class="filterdropdown" (change)="selectChangeHandler($event)">
+              <td style="width: 18%;">
+                  <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                      <option></option>
+                      <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+                  </select>
+              </td>
+              <td>
+              <select class="filterdropdown" name="discounts" (change)="selectDiscount($event)" >
                     <option></option>
-                    <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+                    <option *ngFor="let ds of discount" value="{{ds.discount_id}}"> {{ ds.value }} </option>
+              </select>
+            </td>
+            <td>
+              <select class="filterdropdown">
+                      <option></option>
+                       <option *ngFor="let rs of ram" value="{{rs.id}}"> {{ rs.value }} </option>
                 </select>
             </td>
-          </tr>
-        <tr>
-          <td>
-            <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                  <option></option>
-                  <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
-            </select>
-          </td>
-          <td>
-            <select class="filterdropdown" (change)="selectChangeHandler($event)">
+             <td>
+              <select class="filterdropdown" (change)="selectChangeHandler($event)">
                     <option></option>
-                    <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
+                    <option *ngFor="let pr of processor" value="{{pr.id}}"> {{ pr.value }} </option>
               </select>
-          </td>
-          <td>
-            <select class="filterdropdown" (change)="selectChangeHandler($event)">
+            </td>
+            <td>
+               <select class="filterdropdown">
                   <option></option>
-                  <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
-            </select>
-          </td>
-          <td>
-             <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                <option></option>
-                <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
-            </select>
-          </td>
-          <td>
-             <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                <option></option>
-                <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
-            </select>
-          </td>
-           <td>
-             <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                <option></option>
-                <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
-            </select>
-          </td>
-        </tr>
+                  <option *ngFor="let res of resolution" value="{{res.id}}"> {{ res.value }} </option>
+              </select>
+            </td>
+            <td>
+               <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                  <option></option>
+                  <option *ngFor="let st of storage" value="{{st.id}}"> {{ st.value }} </option>
+              </select>
+            </td>
+             <td>
+               <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                  <option></option>
+                  <option *ngFor="let man of manufacturer" value="{{man.id}}"> {{ man.value }} </option>
+              </select>
+            </td>
+          </tr>
       </table>
       <br/>
 
-      <table style="width:47%" border="1">
+      <table style="width:100%" border="1">
           <tr>
-            <th rowspan="2" style="font-weight: normal; font-size: 16px;"><mat-checkbox>Backlit Keyboard</mat-checkbox></th>
-            <th style="font-weight: normal; font-size: 16px;"><mat-checkbox>Touch Screen</mat-checkbox></th>
-            <th  style="font-weight: normal; font-size: 16px;">Price Range</th>
-            <th>Price</th>
-            <th style="font-weight: normal; font-size: 16px;">
-              Range
-            </th>
+            <td style="font-weight: normal; font-size: 16px;"><mat-checkbox>Backlit Keyboard</mat-checkbox></td>
+            <td style="font-weight: normal; font-size: 16px;"><mat-checkbox>Touch Screen</mat-checkbox></td>
+            <td style="text-align: center; font-weight: normal; font-size: 16px;">Price Range</td>
+            <td>Backlit Keyboard</td>
           </tr>
       </table>
-      <button mat-stroked-button color="accent">Reset</button>
+      <div style="float: right;">
+        <button mat-stroked-button color="accent" routerLink="/products">Reset</button>
+      </div>
+
+       <!--  <mat-grid-list cols="5" rowHeight="2:1">
+        <mat-grid-tile><mat-checkbox>Backlit Keyboard</mat-checkbox></mat-grid-tile>
+        <mat-grid-tile><mat-checkbox>Touch Screen</mat-checkbox></mat-grid-tile>
+        <mat-grid-tile>Price Range 
+        </mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>
+ -->
+<ng5-slider style="width: 40%;" [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+
+        
+
 
 
         <mat-expansion-panel-header>
@@ -88,18 +98,26 @@
     </mat-accordion>
     </div>
 
-  <h2 >Hangout Meet Hardware</h2>
-  <div class="aligned">
-  <mat-card class="example-card">
-    <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        Hangout Meet SpeakerMic
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <b> $ 249.00 </b>
-    </mat-card-actions>
-  </mat-card>
+    <h2 >Hangout Meet Hardware</h2>
+    <div class="aligned">
+    <mat-card class="example-card">
+      <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Hangout Meet SpeakerMic
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <b> $ 249.00 </b>
+      </mat-card-actions>
+    </mat-card>
   </div>
   </div>
+
+
+<footer-page></footer-page>
+
+
+
+
+

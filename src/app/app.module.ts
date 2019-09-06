@@ -30,6 +30,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DialogPageComponent } from './dialog-page/dialog-page.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import { Ng5SliderModule } from 'ng5-slider';
+
 
 
 
@@ -66,6 +68,7 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     MatBadgeModule,
     MatGridListModule,
     NgxSpinnerModule,
+    Ng5SliderModule,
     MatButtonModule,
     MatSliderModule,
     MatDialogModule,
