@@ -42,17 +42,25 @@ export class ProductPageComponent implements OnInit {
 
   selectChangeHandler (event: any) {
  
-    this.category = event.target.discount_value;
-    this.router.navigate(['/products'], {queryParams:{category: this.category} });
+    this.category = event.target.value;
+    this.router.navigate(['/products'], 
+      {queryParams: {category: this.category} 
+
+      });
   }
 
-  selectDiscount(event: any)
+  onSelectt(args)
   {
-    
-    //console.log(event);
-  }
 
-  constructor( public dialog:MatDialog,private router : Router,private route : ActivatedRoute, private spinner: NgxSpinnerService) { }
+   this.discount;  
+  }
+  constructor( 
+    public dialog:MatDialog,
+    private router : Router,
+    private route : ActivatedRoute, 
+    private spinner: NgxSpinnerService
+
+    ) { }
 
 
 openDialog(){
@@ -63,6 +71,7 @@ openDialog(){
 
 
   ngOnInit() {
+
     // this.spinner.show();
     // setTimeout(() => {
     //   /** spinner ends after 5 seconds */
@@ -135,8 +144,9 @@ openDialog(){
 
   public storage = [
 
-  { "id":1, "value":"16GB" },
-  { "id":2, "value":"32GB" }
+  { "id":1, "value":"All" },
+  { "id":2, "value":"16GB" },
+  { "id":3, "value":"32GB" }
 
   ];
 

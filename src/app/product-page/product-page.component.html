@@ -19,43 +19,36 @@
           <tr>
               <td style="width: 18%;">
                   <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                      <option></option>
                       <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
                   </select>
               </td>
               <td>
-              <select class="filterdropdown" name="discounts" (change)="selectDiscount($event)" >
-                    <option></option>
-                    <option *ngFor="let ds of discount" value="{{ds.discount_id}}"> {{ ds.value }} </option>
+              <select class="filterdropdown"   (change)="onSelectt($event)" >
+                    <option *ngFor="let ds of discount" value="{{ds.value}}"> {{ ds.value }} </option>
               </select>
             </td>
             <td>
               <select class="filterdropdown">
-                      <option></option>
                        <option *ngFor="let rs of ram" value="{{rs.id}}"> {{ rs.value }} </option>
                 </select>
             </td>
              <td>
               <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                    <option></option>
                     <option *ngFor="let pr of processor" value="{{pr.id}}"> {{ pr.value }} </option>
               </select>
             </td>
             <td>
                <select class="filterdropdown">
-                  <option></option>
                   <option *ngFor="let res of resolution" value="{{res.id}}"> {{ res.value }} </option>
               </select>
             </td>
             <td>
                <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                  <option></option>
                   <option *ngFor="let st of storage" value="{{st.id}}"> {{ st.value }} </option>
               </select>
             </td>
              <td>
                <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                  <option></option>
                   <option *ngFor="let man of manufacturer" value="{{man.id}}"> {{ man.value }} </option>
               </select>
             </td>
@@ -63,7 +56,7 @@
       </table>
       <br/>
 
-      <table style="width:100%" border="1">
+      <table style="width:100%" border="0">
           <tr>
             <td style="font-weight: normal; font-size: 16px;"><mat-checkbox>Backlit Keyboard</mat-checkbox></td>
             <td style="font-weight: normal; font-size: 16px;"><mat-checkbox>Touch Screen</mat-checkbox></td>
