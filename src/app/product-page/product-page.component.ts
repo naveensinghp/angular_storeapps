@@ -43,16 +43,23 @@ export class ProductPageComponent implements OnInit {
   selectChangeHandler (event: any) {
  
     this.category = event.target.value;
-    this.router.navigate(['/products'], 
-      {queryParams: {category: this.category} 
+     this.router.navigate(['/products'], 
+       {queryParams: {category: this.category} 
 
-      });
+       });
   }
 
-  onSelectt(args)
+  onSelectt(event: any)
   {
+  
+    let dbdiscount = event.target.value;
+    this.router.navigate(['/products'], {queryParams: { discount: dbdiscount } } );
+    //console.log(event.target.id);  
+  }
+  onSelectRam(event: any){
+    //console.log(event.target.value);
+    let dbram = event.target.value;
 
-   this.discount;  
   }
   constructor( 
     public dialog:MatDialog,
@@ -78,18 +85,27 @@ openDialog(){
     //   this.spinner.hide();
     // }, 1000);
 
-    // this.route.paramMap.subscribe(params => {
+     //this.route.paramMap.subscribe(params => {
 
 
-    //   let id = +params.get('id');
-    //   console.log(id);
+       //let id = +params.get('id');
+       //console.log(id);
 
-    // });
-    // console.log( this.route.snapshot.queryParamMap.has('category'));
-    // console.log( this.route.snapshot.queryParamMap.get('category'));
-    // console.log( this.route.snapshot.queryParamMap.getAll('category'));
-    // console.log( this.route.snapshot.queryParamMap.keys);
-    // console.log( this.route.snapshot.queryParams.keys);
+     //});
+
+     if(this.route.snapshot.paramMap.has('category')){
+           this.category = this.route.snapshot.queryParams.get('category');
+
+     }else {
+       this.discount;
+     }
+
+     console.log( this.route.snapshot.queryParamMap.has('category'));
+     //console.log( this.route.snapshot.queryParamMap.get('category'));
+     //console.log( this.route.snapshot.queryParamMap.getAll('category'));
+     //console.log( this.route.snapshot.queryParamMap.keys);
+     //console.log( this.route.snapshot.queryParams.keys);
+     console.log( this.route.snapshot.paramMap.keys);
   }
 
   public categorys = [
