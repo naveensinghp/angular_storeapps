@@ -19,6 +19,7 @@ import { Options, LabelType } from 'ng5-slider';
 })
 export class ProductPageComponent implements OnInit {
   category: string = '';
+  default: string = 'Alls';
   // Price Range Slider
   minValue: number = 100;
   maxValue: number = 400;
@@ -61,6 +62,25 @@ export class ProductPageComponent implements OnInit {
     let dbram = event.target.value;
 
   }
+
+  selectProcessor(event: any) 
+  {
+    //console.log(event.target.value);
+  }
+  selectResolution(event: any)
+  {
+    //console.log(event.target.value);
+  }
+  onselectStorage(event: any)
+  {
+    //console.log(event.target.value);
+  }
+  onselectManfucture(event: any)
+  {
+    //console.log(event.target.value);
+  }
+
+
   constructor( 
     public dialog:MatDialog,
     private router : Router,
@@ -69,6 +89,10 @@ export class ProductPageComponent implements OnInit {
 
     ) { }
 
+reset()
+{
+  this.default;
+}
 
 openDialog(){
   this.dialog.open( DialogPageComponent);
@@ -100,12 +124,12 @@ openDialog(){
        this.discount;
      }
 
-     console.log( this.route.snapshot.queryParamMap.has('category'));
+     //console.log( this.route.snapshot.queryParamMap.has('category'));
      //console.log( this.route.snapshot.queryParamMap.get('category'));
      //console.log( this.route.snapshot.queryParamMap.getAll('category'));
      //console.log( this.route.snapshot.queryParamMap.keys);
      //console.log( this.route.snapshot.queryParams.keys);
-     console.log( this.route.snapshot.paramMap.keys);
+     //console.log( this.route.snapshot.paramMap.keys);
   }
 
   public categorys = [

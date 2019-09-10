@@ -19,6 +19,7 @@
           <tr>
               <td style="width: 18%;">
                   <select class="filterdropdown" (change)="selectChangeHandler($event)">
+                      <option selected="selected"> {{ default }}</option>
                       <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
                   </select>
               </td>
@@ -65,7 +66,7 @@
           </tr>
       </table>
       <div style="float: right;">
-        <button mat-stroked-button color="accent" routerLink="/products">Reset</button>
+        <button mat-stroked-button color="accent" (click)="reset()" >Reset</button>
       </div>
 
        <!--  <mat-grid-list cols="5" rowHeight="2:1">
