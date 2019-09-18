@@ -194,13 +194,46 @@ h4 {
 }
 
 .aligned {
-	padding: 10px 11px 20px 19px;
-    max-width: 12%;
+	
+    max-width: 20%;
     max-height: 20%;
     padding-top: 1%;
     cursor: pointer;
-    text-align: cent
+    margin-bottom: 10%;
+
+  
 }
+
+/* PRODUCT CARD CSS
+/* Remove extra left and right margins, due to padding */
+.row {
+	margin: 0 -5px;
+	max-width: 80%;
+}
+.column {
+  float: left;
+  width: 22%;
+  padding: 0 10px;
+}
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
 
 .productimg {
 	padding: 27px 10px;
