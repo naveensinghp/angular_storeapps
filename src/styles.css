@@ -26,13 +26,19 @@ a {
 	cursor: pointer;
 
 }
+hr{
+	background-color: #4285f4;
+    height: 2px;
+    margin: 0;
+    width: 100px;
+}
 
 .sep{
 	background: #e4e4e4;
     margin-top: 12px;
     border: 1px solid #e4e4e4;
     height: 19px;
-   
+
 }
 
 
@@ -194,14 +200,14 @@ h4 {
 }
 
 .aligned {
-	
+
     max-width: 20%;
     max-height: 20%;
     padding-top: 1%;
     cursor: pointer;
     margin-bottom: 10%;
 
-  
+
 }
 
 /* PRODUCT CARD CSS
@@ -274,13 +280,13 @@ footer .container {
 	margin: 0 20px 0 0;
 	font-size: 14px;
 	font-weight: 400;
-	
+
 }
 
 .fhr {
 	width: 86%;
-	background-color: #f9f9f9; 
-	height: 1px; 
+	background-color: #f9f9f9;
+	height: 1px;
 	border: 0;
 
 }

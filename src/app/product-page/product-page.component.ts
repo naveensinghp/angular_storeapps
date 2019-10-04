@@ -39,23 +39,23 @@ export class ProductPageComponent implements OnInit {
   };
 
 
- 
+
 
   selectChangeHandler (event: any) {
- 
+
     this.category = event.target.value;
-     this.router.navigate(['/products'], 
-       {queryParams: {category: this.category} 
+     this.router.navigate(['/products'],
+       {queryParams: {category: this.category}
 
        });
   }
 
   onSelectt(event: any)
   {
-  
+
     let dbdiscount = event.target.value;
     this.router.navigate(['/products'], {queryParams: { discount: dbdiscount } } );
-    //console.log(event.target.id);  
+    //console.log(event.target.id);
   }
   onSelectRam(event: any){
     //console.log(event.target.value);
@@ -63,7 +63,7 @@ export class ProductPageComponent implements OnInit {
 
   }
 
-  selectProcessor(event: any) 
+  selectProcessor(event: any)
   {
     //console.log(event.target.value);
   }
@@ -81,10 +81,10 @@ export class ProductPageComponent implements OnInit {
   }
 
 
-  constructor( 
+  constructor(
     public dialog:MatDialog,
     private router : Router,
-    private route : ActivatedRoute, 
+    private route : ActivatedRoute,
     private spinner: NgxSpinnerService
 
     ) { }
@@ -137,7 +137,7 @@ openDialog(){
     { "id":2, "name":"Hagouts Meet Hardware" }
   ];
 
- 
+
   public ram=[
 
    { "id":1, "value":"All" },

@@ -1,6 +1,6 @@
 
 <app-header></app-header>
-  <div class="heading"> 
+  <div class="heading">
     <h1> Shop StoreApps </h1>
     <p style="line-height: 0">Find the right product for your workplace (fulfilled by <a (click)="openDialog()"> Promevo </a>).</p>
     <div style="max-width: 65%;">
@@ -72,14 +72,14 @@
        <!--  <mat-grid-list cols="5" rowHeight="2:1">
         <mat-grid-tile><mat-checkbox>Backlit Keyboard</mat-checkbox></mat-grid-tile>
         <mat-grid-tile><mat-checkbox>Touch Screen</mat-checkbox></mat-grid-tile>
-        <mat-grid-tile>Price Range 
+        <mat-grid-tile>Price Range
         </mat-grid-tile>
         <mat-grid-tile>4</mat-grid-tile>
       </mat-grid-list>
  -->
-<ng5-slider style="width: 40%;" [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+<!-- <ng5-slider style="width: 40%;" [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider> -->
 
-        
+
 
 
 
@@ -146,6 +146,60 @@
         </div>
       </div>
       <br>
+      <div class="row" *ngIf="category=='All'">
+        <div class="column">
+          <mat-card class="example-card">
+            <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Hangout Meet SpeakerMic
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <b> $ 249.00 </b>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="column">
+          <mat-card class="example-card">
+            <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Hangout Meet SpeakerMic
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <b> $ 249.00 </b>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="column">
+          <mat-card class="example-card">
+            <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Hangout Meet SpeakerMic
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <b> $ 249.00 </b>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="column">
+          <mat-card class="example-card">
+            <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Hangout Meet SpeakerMic
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <b> $ 249.00 </b>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
     </div>
   </div>
 <p class="text-center">Don't see what you want?<a (click)="openDialog()"> Contact Promevo. </a> </p>
@@ -155,8 +209,3 @@
 
 
 <footer-page></footer-page>
-
-
-
-
-
