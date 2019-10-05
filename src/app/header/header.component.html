@@ -1,9 +1,16 @@
 <header>
     <div class="container">
       <div class="search-container" style="float:right; display: inline-block; margin-top: 6px; text-align: right; padding-right: 17%;">
-            <input  class="placeholder" placeholder="Search Shop Storeapps" type="text">
-            <button class="btn"><i class="fa fa-search"></i></button>&nbsp;
-            <button class="btn" style="margin-right: -28%;">Contact us</button>
+          <form class="example-form">
+                <input   class="placeholder" placeholder="Search Shop Storeapps" [formControl]="control" [matAutocomplete]="auto" type="text">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                        {{street}}
+                      </mat-option>
+                  </mat-autocomplete>
+                <button class="btn"><i class="fa fa-search"></i></button>&nbsp;
+                <button class="btn" style="margin-right: -28%;">Contact us</button>
+          </form>
       </div>
 
       <div style="padding-left:19%; margin-bottom: -10px;">
@@ -21,12 +28,14 @@
          
          <li class="sep"></li>
          <li routerLinkActive="{'active' : active =='products'}"> <a routerLink="/products" > All Products </a> </li>
+         <!-- <li routerLinkActive="{'active' : active =='products/category/hangout-meet-hardware'}"> <a routerLink="/products/category/hangout-meet-hardware" > Hangout-Meets-Hangout </a> </li> -->
       </ul>
       <div style="float: right; padding-right: 13%; margin-top: -51px;">
         <ul>
-          <li style="padding-top: 4px;"> Sign In </li>
+          <li style="padding-top: 4px;cursor:pointer;"> Sign In </li>
          <li style="padding-top: 10%;"> <a routerLink=""> <img src="assets/img/cart.png" width="25"> </a> <span style="padding-top: 7px;left: -7px;" matBadgePosition="before" matBadgeColor="accent" matBadge="2"> </span> </li>
         </ul>
       </div>
     </div>
   </nav>
+      

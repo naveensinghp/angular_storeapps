@@ -15,6 +15,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 
+
+
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -31,6 +36,16 @@ import { DialogPageComponent } from './dialog-page/dialog-page.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { FooterPageComponent } from './footer-page/footer-page.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { AllproductsComponent } from './allproducts/allproducts.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { ReactiveFormsModule } from '@angular/forms';
+import {Observable} from 'rxjs';
+
+
+
+
 
 
 
@@ -47,7 +62,12 @@ import { Ng5SliderModule } from 'ng5-slider';
     ProductPageComponent,
     HeaderComponent,
     DialogPageComponent,
-    FooterPageComponent
+    FooterPageComponent,
+    AllproductsComponent
+  
+
+ 
+
    
 
   ],
@@ -60,6 +80,9 @@ import { Ng5SliderModule } from 'ng5-slider';
     NoopAnimationsModule,
     AppRoutingModule,
     MatCardModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatCheckboxModule,
     MatExpansionModule,
     MatFormFieldModule,
@@ -77,6 +100,8 @@ import { Ng5SliderModule } from 'ng5-slider';
       { path: '', component: HomePageComponent  },
       { path: 'products', component: ProductPageComponent  },
       { path: 'storeapps', component: HomePageComponent },
+      { path: 'storeapps', component: HomePageComponent },
+      { path: 'products/category/hangout-meet-hardware', component: AllproductsComponent },
       { path: '**', component: PageNotFoundComponent }
     ])
   ],
