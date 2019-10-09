@@ -59,12 +59,15 @@
 
       <table style="width:100%" border="0">
           <tr>
-            <td style="font-weight: normal; font-size: 16px;"><mat-checkbox>Backlit Keyboard</mat-checkbox></td>
+            <td style="font-weight: normal; font-size: 16px;"><mat-checkbox [(ngModel)]="checked">Backlit Keyboard</mat-checkbox></td>
             <td style="font-weight: normal; font-size: 16px;"><mat-checkbox>Touch Screen</mat-checkbox></td>
             <td style="text-align: center; font-weight: normal; font-size: 16px;">Price Range</td>
             <td>Backlit Keyboard</td>
           </tr>
       </table>
+      <div *ngIf='checked'>
+        FUCK
+      </div>
       <div style="float: right;">
         <button mat-stroked-button color="accent" (click)="reset()" >Reset</button>
       </div>
