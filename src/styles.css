@@ -90,6 +90,20 @@ header {
 	}
 
 
+	.button {
+		background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 9px 36px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 14px;
+		font-weight: bold;
+		margin: 4px 2px;
+		cursor: pointer;
+	  }
+	.button4 {background-color: #e7e7e7; color: #2387f3;} /* Gray */ 
 
 	.butn {
 		border-radius: 2px;

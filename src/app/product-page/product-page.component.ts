@@ -12,6 +12,7 @@ import { Options, LabelType } from 'ng5-slider';
 
 
 
+
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
@@ -52,6 +53,11 @@ export class ProductPageComponent implements OnInit {
        });
   }
 
+  allProductPage()
+  {
+  
+    this.router.navigate(['/products/category/hangout-meet-hardware'])
+  }
   onSelectt(event: any)
   {
 

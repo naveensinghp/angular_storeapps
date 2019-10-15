@@ -19,7 +19,6 @@
           <tr>
               <td style="width: 18%;">
                   <select class="filterdropdown" (change)="selectChangeHandler($event)">
-                      <option selected="selected"> {{ default }}</option>
                       <option *ngFor="let xs of categorys" value="{{xs.name}}"> {{ xs.name }} </option>
                   </select>
               </td>
@@ -57,13 +56,34 @@
       </table>
       <br/>
 
-        <div fxLayout="row wrap" class="filelistss" fxLayoutGap="10px">
+      <table style="width:100%" border="0" cellspacing="3">
+          <tr>
+              <td style="width: 18%;">
+                  <mat-checkbox >Touch Screen</mat-checkbox>
+              </td>
+              <td style="width: 14%;">
+                  <mat-checkbox >Touch Screen</mat-checkbox>
+            </td>
+            <td style="width: 9%;">
+              Price Range
+            </td>
+             <td rowspan="2" style="width: 45%;">
+                <ng5-slider  [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+            </td>
+            
+             <td>
+                <button class="button button4">Reset</button> 
+            </td>
+          </tr>
+      </table>
+
+        <!-- <div fxLayout="row wrap" class="filelistss" fxLayoutGap="10px">
           <div  fxFlex="20%" > <mat-checkbox [(ngModel)]="checked">Backlit Keyboard</mat-checkbox> </div>
           <div  fxFlex="20%" > <mat-checkbox >Touch Screen</mat-checkbox> </div>
           <div  fxFlex="20%" > Price Range </div>
           <div  fxFlex="20%" > <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider> </div>
           <div  fxFlex="10%" >  <button mat-stroked-button color="primary">Reset</button> </div>
-        </div>
+        </div> -->
 
       <!-- <table style="width:100%" border="1">
           <tr>
@@ -100,7 +120,7 @@
       </mat-expansion-panel>
     </mat-accordion>
     <h2 >Hangout Meet Hardware</h2>
-      <div class="row">
+      <div class="row" (click)="allProductPage()" style="max-width: 100%; cursor: pointer;">
         <div class="column">
           <mat-card class="example-card">
             <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
@@ -155,7 +175,7 @@
         </div>
       </div>
       <br>
-      <div class="row" *ngIf="category=='All'">
+      <div class="row" *ngIf="category=='All'" style="max-width:100%">
         <div class="column">
           <mat-card class="example-card">
             <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">

@@ -105,7 +105,6 @@ import {Observable} from 'rxjs';
       { path: '', component: HomePageComponent  },
       { path: 'products', component: ProductPageComponent  },
       { path: 'storeapps', component: HomePageComponent },
-      { path: 'storeapps', component: HomePageComponent },
       { path: 'products/category/hangout-meet-hardware', component: AllproductsComponent },
       { path: '**', component: PageNotFoundComponent }
     ])
