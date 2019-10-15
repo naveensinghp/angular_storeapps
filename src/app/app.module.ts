@@ -8,6 +8,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 
@@ -38,6 +39,8 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
 import { Ng5SliderModule } from 'ng5-slider';
 import { AllproductsComponent } from './allproducts/allproducts.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { RangeSliderModule  } from 'ngx-rangeslider-component';
+
 
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { ReactiveFormsModule } from '@angular/forms';
@@ -64,11 +67,11 @@ import {Observable} from 'rxjs';
     DialogPageComponent,
     FooterPageComponent,
     AllproductsComponent
-  
 
- 
 
-   
+
+
+
 
   ],
   entryComponents: [
@@ -80,6 +83,8 @@ import {Observable} from 'rxjs';
     NoopAnimationsModule,
     AppRoutingModule,
     MatCardModule,
+    FlexLayoutModule,
+    RangeSliderModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
     FormsModule,
@@ -96,7 +101,7 @@ import {Observable} from 'rxjs';
     MatSliderModule,
     MatDialogModule,
     RouterModule.forRoot([
-      
+
       { path: '', component: HomePageComponent  },
       { path: 'products', component: ProductPageComponent  },
       { path: 'storeapps', component: HomePageComponent },

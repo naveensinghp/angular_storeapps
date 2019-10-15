@@ -39,6 +39,7 @@ export class ProductPageComponent implements OnInit {
   };
 
 
+
  checked = false;
 
 
