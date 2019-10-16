@@ -54,12 +54,12 @@
             </td>
           </tr>
       </table>
-      <br/>
+
 
       <table style="width:100%" border="0" cellspacing="3">
           <tr>
               <td style="width: 18%;">
-                  <mat-checkbox >Touch Screen</mat-checkbox>
+                  <mat-checkbox [(ngModel)]="checked">Backlit Keyboard</mat-checkbox>
               </td>
               <td style="width: 14%;">
                   <mat-checkbox >Touch Screen</mat-checkbox>
@@ -67,12 +67,12 @@
             <td style="width: 9%;">
               Price Range
             </td>
-             <td rowspan="2" style="width: 45%;">
+             <td rowspan="2" style="width: 45%; padding-bottom: 24px;">
                 <ng5-slider  [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
             </td>
-            
-             <td>
-                <button class="button button4">Reset</button> 
+
+             <td style="padding-left:10px;">
+                <button class="button button4">Reset</button>
             </td>
           </tr>
       </table>
@@ -119,8 +119,12 @@
         </mat-expansion-panel-header>
       </mat-expansion-panel>
     </mat-accordion>
+    <div *ngIf='checked' style="padding-top:50px;">
+      No results found. Please try different configurations.
+    </div>
+    <div *ngIf='!checked'>
     <h2 >Hangout Meet Hardware</h2>
-      <div class="row" (click)="allProductPage()" style="max-width: 100%; cursor: pointer;">
+      <div class="row" (click)="allProductPage()" style="max-width: 90%; cursor: pointer;">
         <div class="column">
           <mat-card class="example-card">
             <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
@@ -172,10 +176,11 @@
               <b> $ 249.00 </b>
             </mat-card-actions>
           </mat-card>
+          </div> <!-- checkbox -->
         </div>
       </div>
       <br>
-      <div class="row" *ngIf="category=='All'" style="max-width:100%">
+      <div class="row" *ngIf="category=='Hagouts Meet Hardware'" style="max-width:90%">
         <div class="column">
           <mat-card class="example-card">
             <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">

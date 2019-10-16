@@ -4,22 +4,30 @@
 	<p>Sign up for Google Cloud newsletters with product updates,<br/>
       event information, special offers and more.</p>
     </div>
-    <div style="padding-left: 36%; width: 21%; line-height: 10">
-    	<input _ngcontent-vun-c2="" class="placeholder" placeholder="email@domain" type="text">
+    <div style="padding-left: 36%;  line-height: 10">
+			<div fxLayout="row wrap" class="filelistss">
+				<div  fxFlex="30%" > 	<input _ngcontent-vun-c2="" class="placeholder" placeholder="email@domain" type="text"> </div>
+					<div  fxFlex="25%" >
+						<select class="filterdropdown" (change)="onselectStorage($event)">
+							 <option value="" selected> United States </option>
+					 </select>
+					 </div>
+			</div>
 	</div>
+
 </div>
 
 <footer>
 	<div class="container">
 		<h5 class="ftxt"> Follow us on:</h5>
+		<div fxLayout="row wrap" class="filelistss">
+			 <div  fxFlex="5%" > Blogger </div>
+			 <div  fxFlex="5%" > Twitter </div>
+			 <div  fxFlex="5%" > Youtube </div>
+
+	 </div>
 	</div>
-	<!-- <table style="width:47%; padding-left: 11%" border="1" cellspacing="3">
-		<tr>
-			<th><h4>Follow us on:</h4></th>
-            <th><h4>Solution</h4></th>
-            <th><h4>Products</h4></th>
-        </tr>
-	</table> -->
+
 	<div class="fhr"></div><br>
 	<table style="width:80%; padding-left: 5%" border="0" cellspacing="3">
           <tr>
@@ -85,5 +93,3 @@
         </tr>
 	</table>
 </footer>
-
-

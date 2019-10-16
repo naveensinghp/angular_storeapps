@@ -47,6 +47,7 @@ export class ProductPageComponent implements OnInit {
   selectChangeHandler (event: any) {
 
     this.category = event.target.value;
+    console.log(this.category);
      this.router.navigate(['/products'],
        {queryParams: {category: this.category}
 
@@ -55,7 +56,7 @@ export class ProductPageComponent implements OnInit {
 
   allProductPage()
   {
-  
+
     this.router.navigate(['/products/category/hangout-meet-hardware'])
   }
   onSelectt(event: any)
