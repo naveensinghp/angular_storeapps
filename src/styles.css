@@ -103,7 +103,7 @@ header {
 		margin: 4px 2px;
 		cursor: pointer;
 	  }
-	.button4 {background-color: #e7e7e7; color: #2387f3;} /* Gray */ 
+	.button4 {background-color: #e7e7e7; color: #2387f3;} /* Gray */
 
 	.butn {
 		border-radius: 2px;
@@ -256,8 +256,8 @@ h4 {
 
 
 .productimg {
-	padding: 27px 10px;
-    max-width: 100%;
+	padding: 27px 0px;
+    max-width: 89%;
     display: table-cell;
     vertical-align: middle;
 }
