@@ -28,7 +28,10 @@
 
          <li class="sep"></li>
          <li routerLinkActive="{'active' : active =='allproducts'}"> <a routerLink="/allproducts" > All Products </a> </li>
-         <li routerLinkActive="{'active' : active =='/products/category/hangout-meet-hardware'}"> <a routerLink="/products/category/hangout-meet-hardware" > Hangout-Meets-Hangout </a> </li>
+         <span *ngIf="this.router.url=='/products/category/hangout-meet-hardware'">
+           <li routerLinkActive="{'active' : active =='/products/category/hangout-meet-hardware'}"> <a routerLink="/products/category/hangout-meet-hardware" >
+            Hangout-Meets-Hangout  </a> </li>
+          </span>
       </ul>
       <div style="float: right; padding-right: 13%; margin-top: -51px;">
         <ul>

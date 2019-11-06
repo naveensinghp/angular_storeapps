@@ -40,7 +40,6 @@ import { Ng5SliderModule } from 'ng5-slider';
 import { AllproductsComponent } from './allproducts/allproducts.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { RangeSliderModule  } from 'ngx-rangeslider-component';
-import { AngularFireDatabase } from 'angularfire2/database';
 
 
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here

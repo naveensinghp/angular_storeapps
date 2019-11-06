@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 
 
@@ -14,20 +15,25 @@ import {map, startWith} from 'rxjs/operators';
 
 
 export class HeaderComponent implements OnInit {
-
+  test: string = '';
   control = new FormControl();
   streets : string[] = ['Mobile','Tv','Monitor','DESKTOP','GAMES'];
   filteredStreets: Observable<string[]>;
 
-  constructor() {}
-  
+  constructor(private router:Router) {
+    let test = this.router.url;
+      console.log(test);
+  }
+
+
+
   ngOnInit() {
     this.filteredStreets = this.control.valueChanges.pipe(
       startWith(''),
       map(value => this. _filter(value))
     );
   }
-  private _filter(value: string) : string[] 
+  private _filter(value: string) : string[]
   {
     const filterValue = this. _normalizeValue(value);
     return this.streets.filter(street => this. _normalizeValue(street).includes(filterValue));
