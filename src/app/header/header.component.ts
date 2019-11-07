@@ -22,7 +22,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(private router:Router) {
     let test = this.router.url;
-      console.log(test);
   }
 
 
