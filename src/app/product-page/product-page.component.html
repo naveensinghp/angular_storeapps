@@ -72,43 +72,10 @@
             </td>
 
              <td style="padding-left:10px;">
-                <button class="button button4">Reset</button>
+                <button class="button button4" (click)="resetBtn()">Reset</button>
             </td>
           </tr>
       </table>
-
-        <!-- <div fxLayout="row wrap" class="filelistss" fxLayoutGap="10px">
-          <div  fxFlex="20%" > <mat-checkbox [(ngModel)]="checked">Backlit Keyboard</mat-checkbox> </div>
-          <div  fxFlex="20%" > <mat-checkbox >Touch Screen</mat-checkbox> </div>
-          <div  fxFlex="20%" > Price Range </div>
-          <div  fxFlex="20%" > <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider> </div>
-          <div  fxFlex="10%" >  <button mat-stroked-button color="primary">Reset</button> </div>
-        </div> -->
-
-      <!-- <table style="width:100%" border="1">
-          <tr>
-            <td style="font-weight: normal; font-size: 16px;"><mat-checkbox [(ngModel)]="checked">Backlit Keyboard</mat-checkbox></td>
-            <td style="font-weight: normal; font-size: 16px;"><mat-checkbox>Touch Screen</mat-checkbox></td>
-            <td style="text-align: center; font-weight: normal; font-size: 16px;">Price Range</td>
-            <td><ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider> </td>
-            <td>Backlit Keyboard</td>
-          </tr>
-      </table>
-      <div *ngIf='checked'>
-        FUCK
-      </div> -->
-
-
-       <!--  <mat-grid-list cols="5" rowHeight="2:1">
-        <mat-grid-tile><mat-checkbox>Backlit Keyboard</mat-checkbox></mat-grid-tile>
-        <mat-grid-tile><mat-checkbox>Touch Screen</mat-checkbox></mat-grid-tile>
-        <mat-grid-tile>Price Range
-        </mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
-      </mat-grid-list>
- -->
-
-
 
 
 
@@ -123,62 +90,74 @@
       No results found. Please try different configurations.
     </div>
     <div *ngIf='!checked'>
-    <h2 >Hangout Meet Hardware</h2>
       <div class="row" (click)="allProductPage()" style="max-width: 82%; cursor: pointer;">
         <div class="column">
-          <mat-card style="width:200px; height:270px;">
-           <img src="assets/img/product2.png" class="productimg">
-           <mat-card-content>
-             <p style="font-family:RobotoDraft,arial,sans-serif; font-weight: lighter;">
-               Hangout Meet SpeakerMic (Black)<br/><br/>
-                 <b> $ 287.93 </b>
-             </p>
-           </mat-card-content>
-          </mat-card>
-
-        </div>
-        <div class="column">
-          <mat-card style="width:200px; height:270px;">
-           <img src="assets/img/product4.jpg" class="productimg">
-           <mat-card-content>
-             <p style="font-family:RobotoDraft,arial,sans-serif; font-weight: lighter;">
-               Hangout Meet SpeakerMic (White)<br/><br/>
-                 <b> $ 269.98 </b>
-             </p>
-           </mat-card-content>
-          </mat-card>
-
-        </div>
-        <div class="column">
-          <mat-card style="width:200px; height:270px;">
-           <img src="assets/img/product3.jpg" class="productimg">
-           <mat-card-content>
-             <p style="font-family:RobotoDraft,arial,sans-serif; font-weight: lighter;">
-               Logitech Rally Mic Pod - 989-000430<br/><br/>
-                 <b> $ 349.99 </b>
-             </p>
-           </mat-card-content>
-          </mat-card>
-
-        </div>
-        <div class="column">
-          <mat-card style="width:200px; height:270px;">
-           <img src="assets/img/product5.jpg" class="productimg">
-           <mat-card-content>
-             <p style="font-family:RobotoDraft,arial,sans-serif; font-weight: lighter;">
-               Logitech Tap PC Mount - 939-001825<br/><br/>
-                 <b> $ 99.99 </b>
-             </p>
-           </mat-card-content>
-          </mat-card>
-
+          <table style="width:100%" border="0" cellspacing="3" cellpadding="4">
+            <tr>
+              <th colspan="2">
+                <h2>Hangout Meet Hardware</h2>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <mat-card style="width:200px; height:270px;">
+                  <img src="assets/img/product2.png" class="productimg">
+                  <mat-card-content>
+                    <p style="font-family:RobotoDraft,arial,sans-serif; font-weight: lighter;">
+                      Hangout Meet SpeakerMic (Black)<br/><br/>
+                      <b> $ 287.93 </b>
+                  </p>
+                </mat-card-content>
+               </mat-card>
+              </th>
+              <th>
+                <mat-card style="width:200px; height:270px;">
+                  <img src="assets/img/product2.png" class="productimg">
+                  <mat-card-content>
+                    <p style="font-family:RobotoDraft,arial,sans-serif; font-weight: lighter;">
+                      Hangout Meet SpeakerMic (Black)<br/><br/>
+                      <b> $ 287.93 </b>
+                  </p>
+                </mat-card-content>
+               </mat-card>
+              </th>
+              <th>
+                <mat-card style="width:200px; height:270px;">
+                  <img src="assets/img/product2.png" class="productimg">
+                  <mat-card-content>
+                    <p style="font-family:RobotoDraft,arial,sans-serif; font-weight: lighter;">
+                      Hangout Meet SpeakerMic (Black)<br/><br/>
+                      <b> $ 287.93 </b>
+                  </p>
+                </mat-card-content>
+               </mat-card>
+              </th>
+              <th>
+                <mat-card style="width:200px; height:270px;">
+                  <img src="assets/img/product2.png" class="productimg">
+                  <mat-card-content>
+                    <p style="font-family:RobotoDraft,arial,sans-serif; font-weight: lighter;">
+                      Hangout Meet SpeakerMic (Black)<br/><br/>
+                      <b> $ 287.93 </b>
+                  </p>
+                </mat-card-content>
+               </mat-card>
+              </th>
+              <th style="padding-left: 5%;">
+                <p style="font-size: 10.2px;">See all the items in this category.</p>
+                <button mat-raised-button color="primary">View more</button>
+              </th>
+            </tr>
+          </table>
           </div> <!-- checkbox -->
+          
         </div>
       </div>
+      
       <br>
-      <div class="row" *ngIf="category=='Hagouts Meet Hardware'" style="max-width:90%">
+      <div class="row" *ngIf="category=='Hagouts Meet Hardware' && !checked" style="max-width:82%">
         <div class="column">
-          <mat-card class="example-card">
+          <mat-card class="example-card" style="width:200px; height:270px;">
             <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
             <mat-card-content>
               <p>
@@ -191,7 +170,7 @@
           </mat-card>
         </div>
         <div class="column">
-          <mat-card class="example-card">
+          <mat-card class="example-card" style="width:200px; height:270px;">
             <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
             <mat-card-content>
               <p>
@@ -204,7 +183,7 @@
           </mat-card>
         </div>
         <div class="column">
-          <mat-card class="example-card">
+          <mat-card class="example-card" style="width:200px; height:270px;">
             <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
             <mat-card-content>
               <p>
@@ -217,7 +196,7 @@
           </mat-card>
         </div>
         <div class="column">
-          <mat-card class="example-card">
+          <mat-card class="example-card" style="width:200px; height:270px;">
             <img mat-card-image class="productimg" src="assets/img/product2.png" alt="Photo of a Shiba Inu">
             <mat-card-content>
               <p>

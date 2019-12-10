@@ -5,7 +5,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 import { MatDialog } from '@angular/material'
 import { DialogPageComponent } from '../dialog-page/dialog-page.component';
 import { Options, LabelType } from 'ng5-slider';
-
+import { PRODUCT } from '../mockup-product';
 
 
 
@@ -19,7 +19,9 @@ import { Options, LabelType } from 'ng5-slider';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
+  producttitle = PRODUCT;
   category: string = '';
+  product1: string = 'Hangout StoreTesting';
   default: string = 'Alls';
   // Price Range Slider
   minValue: number = 100;
@@ -52,6 +54,13 @@ export class ProductPageComponent implements OnInit {
        {queryParams: {category: this.category}
 
        });
+  }
+
+  resetBtn(){
+    if(this.category == 'Hagouts Meet Hardware'){
+      let cc = this.category = 'All';
+      console.log(cc);
+    }
   }
 
   allProductPage()

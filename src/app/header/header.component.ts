@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 
 
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -15,6 +16,7 @@ import { Router } from '@angular/router';
 
 
 export class HeaderComponent implements OnInit {
+
   test: string = '';
   control = new FormControl();
   streets : string[] = ['Mobile','Tv','Monitor','DESKTOP','GAMES'];

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { ProductPageComponent } from '../product-page/product-page.component';
 
 @Component({
   selector: 'app-allproducts',

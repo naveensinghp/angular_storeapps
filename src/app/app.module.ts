@@ -103,7 +103,7 @@ import {Observable} from 'rxjs';
     RouterModule.forRoot([
 
       { path: '', component: HomePageComponent  },
-      { path: 'allproducts', component: ProductPageComponent  },
+      { path: 'products', component: ProductPageComponent  },
       { path: 'storeapps', component: HomePageComponent },
       { path: 'products/category/hangout-meet-hardware', component: AllproductsComponent },
       { path: '**', component: PageNotFoundComponent }
